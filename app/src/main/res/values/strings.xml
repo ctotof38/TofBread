@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Pain de tof</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="input_receipe_title">recette</string>
+	<string name="input_quantity_title">quantité</string>
+	<string name="output_dough_title">fabrication</string>
+	<string name="output_dough_roll_title">pâtons</string>
+
+    <string name="title_quantity">quantités à utiliser</string>
+    <string name="nb_pain">nombre de pains</string>
+	<string name="pate_pour_un_pain">pâte pour un pain (g)</string>
+	<string name="pourcentage_levain">levain (%)</string>
+	<string name="pourcentage_eau_moule">eau du pain moulé (%)</string>
+	<string name="pourcentage_eau">eau du pain (%)</string>
+	<string name="pourcentage_eau_levain">eau du levain (%)</string>
+	<string name="levain_actuel">levain actuel (g)</string>
+	<string name="pourcentage_sel">sel (%)</string>
+	<string name="levain_a_garder">levain à garder (g)</string>
+	<string name="pourcentage_farine_autre">farine autre (%)</string>
+    <string name="calculate">calculer</string>
+    <string name="save">enregistrer valeur par défaut</string>
+    <string name="cut_pasta">pâte à découper (g)</string>
+
+    <!-- quantity to input -->
+    <string name="pain_simple">nb pain simple</string>
+    <string name="pain_simple_moule">nb pain simple moulé</string>
+    <string name="pain_graine">nb pain à graine</string>
+    <string name="pain_graine_moule">nb pain à graine moulé</string>
+    <string name="demi_pain_simple">nb &#189; pain simple</string>
+    <string name="demi_pain_simple_moule">nb &#189; pain simple moulé</string>
+    <string name="demi_pain_graine">nb &#189; pain à graine</string>
+    <string name="demi_pain_graine_moule">nb &#189; pain à graine moulé</string>
+
+    <!-- values to prepare the pasta -->
+    <string name="poids_pain">poids du pain (g)</string>
+    <string name="pate_totale">pâte totale (g)</string>
+    <string name="farine_recette">farine de blé (g)</string>
+    <string name="eau_recette">eau (g)</string>
+    <string name="sel">sel (g)</string>
+    <string name="graine_a_ajouter">graine à ajouter (g)</string>
+    <string name="levain_a_faire">levain à préparer (g)</string>
+    <string name="farine_levain_a_faire">farine pour levain (g)</string>
+    <string name="eau_levain_a_faire">eau pour levain (g)</string>
+
+    <string name="title_keep">pâte à conserver (g)</string>
+    <string name="water_to_add">eau à ajouter</string>
+
+
+    <string name="farine_levain">farine ajoutée au levain (g)</string>
+    <string name="eau_levain">eau ajoutée au levain (g)</string>
+
+    <string name="pate_totale_simple">pâte simple totale (g)</string>
+    <string name="pate_totale_a_graine">pâte à graine totale (g)</string>
+    <string name="pate_simple">simple non moulé (g)</string>
+    <string name="pate_a_graine">graine non moulé (g)</string>
+
+    <string name="paton_simple">pâton simple</string>
+    <string name="paton_graine">pâton à graine</string>
+    <string name="patons_simple">pâtons simple</string>
+    <string name="patons_graine">pâtons à graine</string>
+    <string name="paton_simple_moule">pâton simple moulé</string>
+    <string name="paton_graine_moule">pâton à graine moulé</string>
+    <string name="patons_simple_moule">pâtons simple moulés</string>
+    <string name="patons_graine_moule">pâtons à graine moulés</string>
+
+    <string name="bon_appetit">Bon appétit</string>
+    <string name="footer_recipe">choisissez les proportions de votre recette</string>
+    <string name="footer_quantity">choisissez les quantités à réaliser</string>
+    <string name="footer_instructions">température idéale pour la pâte 25°c\n1ère montée minimum 4h\n2e montée après façonnage 50 min\ncuisson 45 min à 210°c pour un pain de 1kg</string>
+</resources>
