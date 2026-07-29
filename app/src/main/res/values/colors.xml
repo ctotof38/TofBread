@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimaryGreen">#8BC34A</color>
     <color name="light_gray">#e0e0e0</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
 </resources>
