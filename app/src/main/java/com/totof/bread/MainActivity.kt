@@ -6,8 +6,12 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.viewpager2.widget.ViewPager2
 import com.totof.bread.data.Input
 import com.totof.bread.data.Preferences
@@ -21,9 +25,16 @@ class MainActivity : AppCompatActivity(), MainFragmentCallBack {
     private lateinit var mSectionsPagerAdapter: SectionsPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.footerContainer) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.updatePadding(bottom = systemBars.bottom)
+            insets
+        }
 
         preferences = Preferences(this)
         viewModel.setInput(preferences!!.input)
