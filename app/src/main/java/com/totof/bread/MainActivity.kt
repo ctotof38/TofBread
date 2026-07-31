@@ -1,6 +1,5 @@
 package com.totof.bread
 
-import android.content.Context
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -74,7 +73,7 @@ class MainActivity : AppCompatActivity(), MainFragmentCallBack {
         input.currentFragmentPosition = position
         
         val old = mSectionsPagerAdapter.getFragment(input.oldFragmentPosition)
-        val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+        val imm = getSystemService(INPUT_METHOD_SERVICE) as? InputMethodManager
         imm?.hideSoftInputFromWindow(binding.container.windowToken, 0)
 
         if (old is InputInterface) {
