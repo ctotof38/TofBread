@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.BundleCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.totof.bread.data.Input
@@ -20,12 +21,13 @@ class InputFragment : Fragment(), InputInterface {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        input = arguments?.getSerializable(ARG_INPUT) as? Input ?: viewModel.input.value!!
+        input = (arguments?.let { BundleCompat.getSerializable(it, ARG_INPUT, Input::class.java) }) ?: viewModel.input.value!!
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentInputBinding.inflate(inflater, container, false)
         return binding.root

@@ -40,7 +40,8 @@
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:gravity="end"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:selectAllOnFocus="true" />
 
         <TextView
             android:id="@+id/textView6"
@@ -92,7 +93,8 @@
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:gravity="end"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:selectAllOnFocus="true" />
 
         <EditText
             android:id="@+id/pourcentageEau"
@@ -104,7 +106,8 @@
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:gravity="end"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:selectAllOnFocus="true" />
 
         <EditText
             android:id="@+id/pourcentageEauLevain"
@@ -116,7 +119,8 @@
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:gravity="end"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:selectAllOnFocus="true" />
 
         <EditText
             android:id="@+id/pourcentageSel"
@@ -128,7 +132,8 @@
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:gravity="end"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:selectAllOnFocus="true" />
 
         <EditText
             android:id="@+id/levainAGarder"
@@ -140,6 +145,7 @@
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:gravity="end"
-            android:textAlignment="viewEnd" />
+            android:textAlignment="viewEnd"
+            android:selectAllOnFocus="true" />
     </GridLayout>
 </ScrollView>

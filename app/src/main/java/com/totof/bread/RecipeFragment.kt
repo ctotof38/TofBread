@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.BundleCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.totof.bread.data.Input
@@ -20,12 +21,13 @@ class RecipeFragment : Fragment(), InputInterface {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        input = arguments?.getSerializable(ARG_INPUT) as? Input ?: viewModel.input.value!!
+        input = (arguments?.let { BundleCompat.getSerializable(it, ARG_INPUT, Input::class.java) }) ?: viewModel.input.value!!
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentRecipeBinding.inflate(inflater, container, false)
         return binding.root
@@ -38,12 +40,12 @@ class RecipeFragment : Fragment(), InputInterface {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.poidsPain.setHint(input.poidsPain.toString())
-        binding.pourcentageLevain.setHint(input.pourcentageLevain.toString())
-        binding.pourcentageEau.setHint(input.pourcentageEau.toString())
-        binding.pourcentageEauLevain.setHint(input.pourcentageEauLevain.toString())
-        binding.pourcentageSel.setHint(input.pourcentageSel.toString())
-        binding.levainAGarder.setHint(input.levainAGarder.toString())
+        binding.poidsPain.setText(input.poidsPain.toString())
+        binding.pourcentageLevain.setText(input.pourcentageLevain.toString())
+        binding.pourcentageEau.setText(input.pourcentageEau.toString())
+        binding.pourcentageEauLevain.setText(input.pourcentageEauLevain.toString())
+        binding.pourcentageSel.setText(input.pourcentageSel.toString())
+        binding.levainAGarder.setText(input.levainAGarder.toString())
     }
 
     override fun onAttach(context: Context) {

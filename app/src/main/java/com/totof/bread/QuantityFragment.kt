@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.BundleCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.totof.bread.data.Input
-import com.totof.bread.data.Output
 import com.totof.bread.databinding.FragmentQuantityBinding
 import com.totof.bread.process.Calculator
 import com.totof.bread.process.InputInterface
@@ -23,12 +23,13 @@ class QuantityFragment : Fragment(), InputInterface {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        input = arguments?.getSerializable(ARG_INPUT) as? Input ?: viewModel.input.value!!
+        input = (arguments?.let { BundleCompat.getSerializable(it, ARG_INPUT, Input::class.java) }) ?: viewModel.input.value!!
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentQuantityBinding.inflate(inflater, container, false)
         return binding.root

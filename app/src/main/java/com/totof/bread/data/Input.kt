@@ -37,12 +37,12 @@ class Input : Serializable {
         private set
 
     val seed: Double
-        get() = poidsPain * pourcentageGraine / 100
+        get() = (poidsPain * pourcentageGraine) / 100
 
     fun setPourcentageLevain(newStringValue: String, defaultValue: Double) {
         try {
             pourcentageLevain = update(newStringValue, defaultValue, pourcentageLevain)
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -50,7 +50,7 @@ class Input : Serializable {
     fun setPourcentageEau(newStringValue: String, defaultValue: Double) {
         try {
             pourcentageEau = update(newStringValue, defaultValue, pourcentageEau)
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -58,7 +58,7 @@ class Input : Serializable {
     fun setNbPainSimple(newStringValue: String, defaultValue: Double) {
         try {
             nbPainSimple = update(newStringValue, defaultValue, nbPainSimple)
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -67,7 +67,7 @@ class Input : Serializable {
         try {
             nbPainSimpleMoule = update(newStringValue, defaultValue, nbPainSimpleMoule)
             Log.d("Input", "nb pain simple moule : $nbPainSimpleMoule")
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -75,7 +75,7 @@ class Input : Serializable {
     fun setNbPainGraine(newStringValue: String, defaultValue: Double) {
         try {
             nbPainGraine = update(newStringValue, defaultValue, nbPainGraine)
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -84,7 +84,7 @@ class Input : Serializable {
         try {
             nbPainGraineMoule = update(newStringValue, defaultValue, nbPainGraineMoule)
             Log.d("Input", "nb pain graine moule : $nbPainGraineMoule")
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -92,7 +92,7 @@ class Input : Serializable {
     fun setPoidsPain(newStringValue: String, defaultValue: Double) {
         try {
             poidsPain = update(newStringValue, defaultValue, poidsPain)
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -106,7 +106,7 @@ class Input : Serializable {
     fun setLevainActuel(newStringValue: String, defaultValue: Double) {
         try {
             levainActuel = update(newStringValue, defaultValue, levainActuel)
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -114,7 +114,7 @@ class Input : Serializable {
     fun setLevainAGarder(newStringValue: String, defaultValue: Double) {
         try {
             levainAGarder = update(newStringValue, defaultValue, levainAGarder)
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -122,7 +122,7 @@ class Input : Serializable {
     fun setNbDemiPainSimple(newStringValue: String, defaultValue: Double) {
         try {
             nbDemiPainSimple = update(newStringValue, defaultValue, nbDemiPainSimple)
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -130,7 +130,7 @@ class Input : Serializable {
     fun setNbDemiPainSimpleMoule(newStringValue: String, defaultValue: Double) {
         try {
             nbDemiPainSimpleMoule = update(newStringValue, defaultValue, nbDemiPainSimpleMoule)
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -138,7 +138,7 @@ class Input : Serializable {
     fun setNbDemiPainGraine(newStringValue: String, defaultValue: Double) {
         try {
             nbDemiPainGraine = update(newStringValue, defaultValue, nbDemiPainGraine)
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -146,7 +146,7 @@ class Input : Serializable {
     fun setNbDemiPainGraineMoule(newStringValue: String, defaultValue: Double) {
         try {
             nbDemiPainGraineMoule = update(newStringValue, defaultValue, nbDemiPainGraineMoule)
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -154,7 +154,7 @@ class Input : Serializable {
     fun setPourcentageEauLevain(newStringValue: String, defaultValue: Double) {
         try {
             pourcentageEauLevain = update(newStringValue, defaultValue, pourcentageEauLevain)
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
@@ -162,7 +162,7 @@ class Input : Serializable {
     fun setPourcentageSel(newStringValue: String, defaultValue: Double) {
         try {
             pourcentageSel = update(newStringValue, defaultValue, pourcentageSel)
-        } catch (e: NumberFormatException) {
+        } catch (_: NumberFormatException) {
             // not updated
         }
     }
